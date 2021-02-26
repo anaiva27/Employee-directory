@@ -66,7 +66,7 @@ export default class Table extends Component {
     return (
       <div>
        <Search handleSearchChange={this.handleSearchChange}/>
-        <table class="table mt-2">
+        <table className="table mt-2">
           <thead>
             <tr>
               <th>Image</th>

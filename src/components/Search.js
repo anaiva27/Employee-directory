@@ -2,9 +2,9 @@ import React from 'react'
 
 const Search = ({handleSearchChange}) => {
     return (
-        <search>
+        <div>
              <input className="search" onChange={handleSearchChange} placeholder="Search..."></input>
-        </search>
+        </div>
     )
 }
 

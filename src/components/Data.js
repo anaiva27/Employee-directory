@@ -1,8 +1,15 @@
-export default function Data(props) {
+export default function Data({employees}) {
+  function getDate(date) {
+  // format date to mm-dd-yyyy
+  const splitDate = date.substr(0, 10).split("-")
+  return splitDate[1]+"-"+ splitDate[2]+"-"+ splitDate[0]
+  }
   return (
     <>
+   
       {/* filling up the table rows with user info */}
-      {props.employees.map((result) => (
+      {employees.map((result) => (
+        
         <tr key={result.login.uuid}>
           <td>
             <img src={result.picture.medium} alt={result.name.first} />
@@ -12,7 +19,7 @@ export default function Data(props) {
           </td>
           <td>{result.phone}</td>
           <td>{result.email}</td>
-          <td>{result.dob.date}</td>
+          <td>{getDate(result.dob.date)}</td>
         </tr>
       ))}
     </>
